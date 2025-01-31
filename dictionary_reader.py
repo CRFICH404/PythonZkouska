@@ -215,6 +215,8 @@ def create_word_size_graph(data):
 if __name__ == '__main__':
     dictionary_data = read_dictionary_file()
     files_to_work_with = os.listdir('./ispell.cs/cat')
+    if not os.path.exists('./ispell.cs/out'):
+        os.mkdir('./ispell.cs/out')
     files_to_work_with_loaded = []
 
     for filename in files_to_work_with:
